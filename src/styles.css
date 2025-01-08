@@ -1,0 +1,60 @@
+:root {
+    --dark-green: #262b15;
+    --dark-gray: #3f3f3f;
+    --olive-green: #464b37;
+    --moss-green: #848871;
+    --light-gray: #afb4ad;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-green);
+    color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background-color: var(--dark-gray);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: var(--moss-green);
+  }
+  
+  h3 {
+    color: var(--light-gray);
+  }
+  
+  section {
+    padding: 2rem;
+  }
+  
+  .skills {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .skills div {
+    background-color: var(--olive-green);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem;
+    text-align: center;
+    flex-basis: 20%;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
