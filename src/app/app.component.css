@@ -199,6 +199,43 @@ section#contact button:hover {
   color: var(--white);
 }
 
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Verdeelt de items gelijkmatig */
+  align-items: center;
+  gap: 2rem; /* Ruimte tussen de iconen */
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraal uitlijnen van iconen en tekst */
+  justify-content: center;
+  gap: 0.5rem; /* Ruimte tussen icoon en tekst */
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: var(--light-blue);
+  line-height: 1; /* Zorgt ervoor dat de iconen niet te veel ruimte innemen */
+}
+
+.contact-item i:hover {
+  color: var(--white); /* Verander kleur bij hover */
+}
+
+.contact-item a {
+  text-align: center; /* Tekst centreren onder het icoon */
+  font-size: 1.2rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: var(--light-blue);
+}
+
 /* Footer */
 footer {
   background-color: var(--deep-blue);
