@@ -9,6 +9,11 @@
   --black: #000000;
 }
 
+html, body {
+  overflow-x: hidden; /* Verbergt horizontale scrollbalken */
+  width: 100%; /* Zorgt ervoor dat de breedte van de pagina niet groter is dan de viewport */
+}
+
 /* Global Styles */
 body {
   font-family: 'Poppins', sans-serif;
@@ -122,21 +127,17 @@ section p {
 }
 
 .skills-container {
-  display: flex; /* Gebruik flexbox om de items op één rij uit te lijnen */
-  justify-content: space-between; /* Zorg ervoor dat de ruimte gelijkmatig verdeeld is */
-  align-items: center; /* Zorg ervoor dat de items verticaal gecentreerd zijn */
-  flex-wrap: wrap; /* Laat de items door de container heen breken als er niet genoeg ruimte is */
+  display: flex;
+  flex-wrap: wrap; /* Laat de items door de container heen breken naar een nieuwe rij als dat nodig is */
+  justify-content: space-evenly; /* Zorg ervoor dat de items gelijkmatig verspreid zijn */
   gap: 1rem; /* Ruimte tussen de items */
-  text-align: center;
-  max-width: 100%; /* Zorg ervoor dat de container niet breder is dan de beschikbare ruimte */
-  padding: 0 1rem; /* Voeg wat padding toe aan de zijkanten */
-  box-sizing: border-box; /* Zorg ervoor dat padding geen extra ruimte toevoegt aan de breedte */
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
-
 .skill-item {
-  flex: 1 1 150px; /* Allow items to grow/shrink but not exceed 150px width */
-  max-width: 150px; /* Prevents items from growing too large */
+  flex: 1 1 22%; /* Elke skill-item krijgt 22% van de breedte van de container */
+  max-width: 200px; /* Voorkom dat de items te breed worden */
   background: var(--light-blue);
   padding: 1.5rem;
   border-radius: 10px;
@@ -144,7 +145,6 @@ section p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
 
 .skill-item img {
   width: 100px;
