@@ -121,20 +121,35 @@ section p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Skills Section */
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  display: flex; /* Gebruik flexbox om de items op één rij uit te lijnen */
+  justify-content: space-between; /* Zorg ervoor dat de ruimte gelijkmatig verdeeld is */
+  align-items: center; /* Zorg ervoor dat de items verticaal gecentreerd zijn */
+  flex-wrap: wrap; /* Laat de items door de container heen breken als er niet genoeg ruimte is */
+  gap: 1rem; /* Ruimte tussen de items */
   text-align: center;
+  max-width: 100%; /* Zorg ervoor dat de container niet breder is dan de beschikbare ruimte */
+  padding: 0 1rem; /* Voeg wat padding toe aan de zijkanten */
+  box-sizing: border-box; /* Zorg ervoor dat padding geen extra ruimte toevoegt aan de breedte */
 }
 
+
 .skill-item {
+  flex: 1 1 150px; /* Allow items to grow/shrink but not exceed 150px width */
+  max-width: 150px; /* Prevents items from growing too large */
   background: var(--light-blue);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.skill-item img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem auto; /* Centraal uitlijnen en ruimte onder de afbeelding */
 }
 
 .skill-item:hover {
@@ -142,16 +157,9 @@ section p {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.skill-item img {
-  width: 100px;
-  height: 100px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-}
-
 .skill-item p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--white);
   font-weight: 600;
 }
